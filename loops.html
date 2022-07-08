@@ -1,0 +1,48 @@
+<html>
+    <body>
+      <p>JavaScript Loops</p>  
+    </body>
+    <script>
+     //loop is a programming construct that executes a piece of code as long as certain condition is met
+    // Types of loops
+    // Entry controlled - Loops where by the test condition is checked b4 executing the loop eg: for, while
+    // Exit controlled - Loops where by the test condition is checked after the loop is executed
+
+    // For loop
+    for(let i=0;i<5;i++){
+        // i=0 represents counter variable
+        // i<5 represents condition
+        // i++ represents counter variable increment
+       console.log("apex"); 
+    }
+    // while loop
+    let x=1;
+    while(x<=5){
+        console.log(x);
+        x++;
+    }
+    // do while loop
+    // remember here compared to other loops this loop executes the code first then condition is checked
+    let i=1;
+    do {
+        console.log(i);
+        i++;
+    }while(i<5)
+    // loop break
+    for(let i=0;i<10;i++){
+       document.write(i+"<br>");
+       if(i==5){
+        break;
+       }
+    } 
+    // loop skips
+    // continue is used for this
+    for(let i=0;i<7;i++){
+       document.write(i+"<br>");
+       if(i==5){
+        continue;
+       }
+    } 
+    </script>
+    
+</html>

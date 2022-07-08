@@ -1,0 +1,71 @@
+<html>
+    <body>
+        <!--Array is an object that lets you store multiple values in a single variable
+        Length of a JS array is not fixed 
+        Uses integers as indices-->
+      <p id="demo">
+        <p>JavaScript Arrays</p> 
+      </p>  
+    </body>
+    <script>
+// Array creation
+let cars=['BMW','Honda', 'Volvo'];
+document.getElementById('demo').innerHTML=cars;
+// Access an array element
+let bmw=cars[0];
+document.getElementById('demo').innerHTML=bmw;
+// Array length property
+let arrlen=cars.length;
+document.getElementById('demo').innerHTML=arrlen;
+// Access the last array element
+let lastarrelement=cars[cars.length-1]
+document.getElementById('demo').innerHTML=lastarrelement;
+// Loop over an array items
+cars.forEach((item,index,array)=>{(console.log(item,index))});
+// Array methods
+// toString() - Converts an array values to string
+document.getElementById('demo').innerHTML=cars.toString();
+// pop() - Removes last element from array
+let poppedval=cars.pop();
+document.getElementById('demo').innerHTML=poppedval;
+console.log(cars);
+// push() -Appends a new element as the last element of array
+cars.push('Audi');
+document.getElementById('demo').innerHTML=cars;
+//shift()- used to remove the first element from an array
+cars.shift();
+document.getElementById('demo').innerHTML=cars;
+// unshift() - Adds an element at the beginning of an array
+cars.unshift('Mitsubishi');
+document.getElementById('demo').innerHTML=cars;
+// concat() - used to merge 2 existing arrays
+bikes=['Yamaha','Suzuki','royal'];
+let vehicles= cars.concat(bikes);
+document.getElementById('demo').innerHTML=vehicles;
+// sort() - Orders the array values in ascending order
+document.getElementById('demo').innerHTML=vehicles.sort();
+// reverse()- Orders the array values in descending order
+document.getElementById('demo').innerHTML=vehicles.reverse();
+// map() - Creates a new array and performs a function on each array element
+let num1=[2,3,4,5,6,7];
+let num2=num1.map(multiply);
+function multiply(value){
+    return value*2;
+}
+document.getElementById('demo').innerHTML=num2;
+// filter()- takes each element in an array and applies a conditional statement against it.
+// If the result is true then the element gets pushed onto the output otherwise it wont 
+let num3= num1.filter(comp);
+function comp(value){
+    return value >4;
+}
+document.getElementById('demo').innerHTML=num3;
+// reduce() - reduces an array of values down to just one value using a function.It does not affect the original array
+let num4=num1.reduce(sum);
+function sum(total,value){
+ return total +value;
+}
+document.getElementById('demo').innerHTML=num4;
+
+</script>
+</html>

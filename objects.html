@@ -1,0 +1,81 @@
+<html>
+    <body>
+        <p>JavaScript Objects</p>
+        <p id="demo"></p>
+        <button id="click-me">CLICK ME</button>
+    </body>
+    <script>
+// JS objects are real world enitities having state and behavior eg:car
+// eg. a car has a state of color and module and a behaviour of accelerate and break
+// JS is template based and we can create objects without the need to create a class
+    // creating a JS object involves 3 methods:
+    // method 1:using object literal and define a JS object
+        var student={
+            name : 'Chris',
+            age: 17,
+            studies: 'IT',
+        };
+    document.getElementById('demo').innerHTML=student.name+" is of age "+student.age+" and studies "+student.studies;
+    
+    //method 2: use the new keyword 
+    var student2=new Object();
+    student2.name='Drew';
+    student2.age=20;
+    student2.studies='Programming';
+    document.getElementById('demo').innerHTML=student2.name+" is of age "+student2.age+" and studies "+student2.studies;
+    // method 3: use an object constructor
+    function stud(name, age,studies){
+        this.name=name;
+        this.age=age;
+        this.studies=studies;
+        // return this.name, this.age, this.studies;
+    }
+    var student3=new stud('Bryce',22,'Engineering');
+    document.getElementById('demo').innerHTML=student3.name+" is of age "+student3.age+" and studies "+student3.studies;
+// Object properties
+// JS Objects are collection of unordered properties
+// Values associated with JS objects are called Properties
+// Properties can be added, updated, deleted excluding read only properties
+var student4={
+            name : 'Chris',
+            age: 17,
+            studies: 'IT',
+        };
+        student4.age=24;
+        document.getElementById('demo').innerHTML=student4.name+" is of age "+student4.age+" and studies "+student4.studies;
+// Object methods
+let user= {
+    name: 'Ken',
+    age:24,
+}
+function sayHi(){
+    alert('Hello');
+}
+// Creating a new property and in that property we are storing a method
+ user.message=sayHi;  
+ document.getElementById('demo').innerHTML='Hi'+user.name; 
+ document.getElementById('click-me').onclick=user.message; 
+// JS Object Accessors
+// Getters and Setters allow defining of object accessors
+// Getter is used to get the value of the properties of an object
+// Setter is used to set the value of the properties of an object
+var carx= {
+    model: 'bmw 200d',
+    color:'blue',
+    fuel_type:'diesel',
+    // getter method
+    get fuel(){
+    return this.fuel_type;
+},
+// setter method
+set fuelset(fuel){
+    return this.fuel_type=fuel;
+}
+};
+document.getElementById('demo').innerHTML=carx.fuel;
+carx.fuelset='Petrol';
+document.getElementById('demo').innerHTML=carx.fuel_type;
+
+    </script>
+
+</html>
