@@ -1,0 +1,33 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+// Variable scopes in JS include:
+    // Global-variables are declared outside function since they are accessible anywhere
+    // Local- variables are declared in a function and are only accessible in that function 
+    let a= 10;
+    function My_function(){
+        let b =20;
+        document.write(a+b);
+    }
+    My_function();
+//Closure in JS is a feature where an inner function has access to the outer function variables 
+// A closure has 3 scope chains (Scope chain is a stack consisting of all references to variables for the function being executed):
+        // Has access to its own scope, ie: variables defined within its curly braces
+        // Has access to variables of outer functions
+        // Has access to global variables
+var a1=10;
+function First_Func(){
+    var b1= 20;
+    function Second_Func(){//this is a closure since it accesses variables a1(global variable) and b1(outer function variable)
+        var c= a1+b1;
+        return c;
+    }
+    return Second_Func();
+}
+var sum= First_Func() ;
+document.write("<br>The sum is "+ sum+"<br>")
+
+    </script>
+</html>

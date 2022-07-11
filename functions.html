@@ -1,0 +1,91 @@
+<html>
+
+<body>
+   <p id="demo"></p> 
+    
+</body>
+<script>
+// functions are gropu of reusable codes that can be called anywhere in the program
+function My_function(val){
+    document.getElementById("demo").innerHTML=val*val;
+}
+My_function(5);
+// function expressions
+// A function can also be defined as an expression. A function expression can be stored as a variable
+    let x= function (){
+        alert("Hello");
+    }
+    document.getElementById("demo").innerHTML=x();
+// function constructors
+var myfunction =new Function('a','b', 'return a+b;');
+document.getElementById("demo").innerHTML=myfunction(3,4);
+// Self invoking functions
+// A self invoking expression is invoked(started) automatically without being called
+// Function expressions will execute automatically if expression is followed by ()
+// You have to add parenthesis around the function to indicate that it is a function expression
+(function(){
+    alert('Welcome to JS')
+})()
+// Functions as values
+// Here we define the function and then assign it to a variable unlike in expressions
+function Product(a,b){
+    return a*b;
+}
+let y=Product(2,5);
+document.getElementById('demo').innerHTML='The product is '+ y;
+// Functions as objects
+// JS functions are special types of objects called function objects 
+// A function object includes a string which holds the actual code ie: function body
+var body="return Math.PI*r*r";
+var circlearea=new Function('r',body);
+alert(circlearea(5));
+// Arrow functions
+// Arrow function expressions are ill suited as methods and they cannot be used as constructors
+// const myfunc=(a,b,c)=>a*b*c;
+// the above myfunc is similar to the one below
+const myfunc=(a,b,c)=>{return a*b*c};
+let product=myfunc(2,3,4);
+document.getElementById('demo').innerHTML='The product of the 3 digits is '+ product;
+// Generator functions
+// Regular functions can rerturn only one, single value(or nothing)
+// Generators can return(yield) multiple values one after another on demand
+// To create a generator we use the syntax function *
+// next() in a generator function returns 2 properties:
+                // value- the yielded value
+                // done- True if the function code is finished false if otherwise
+function * generateFunc(){
+    yield 1;
+    yield 2;
+    return 3;
+}                
+let generator= generateFunc();
+let first=generator.next();
+let second=generator.next();
+let third=generator.next();
+alert(JSON.stringify(first));
+alert(JSON.stringify(second));
+alert(JSON.stringify(third));
+// Predefined functions
+// Examples of predefined functions are:
+// eval() -evaluates a string and returns a value
+// parseInt()- Parses a string argument and returns an integer of specified radix or base
+// parseFloat()- Parses a string argument and returns a floating point number
+// escape()- Reurns a hexadecimal encoding of an argument
+// unescape()-Returns the ASCII string for the specified value
+
+let x1=5;
+let y1=6;
+let z=7;
+let Joe='Joe';
+// for eval(expression) the if the expression is a mathematical expression it gets evaluated and thw result is provided and if it is a 
+// variable its value is printed
+console.log(eval('x1+y1'));
+console.log(eval(z));
+console.log(eval('Joe'));
+
+
+console.log(parseInt('2 + 2'));
+console.log(parseInt(2+2));
+
+</script>
+</html>
