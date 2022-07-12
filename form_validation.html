@@ -1,0 +1,38 @@
+<html>
+<body>
+<form action="message.html" name="myform" onsubmit="return validate()">
+    <input name="email" type="email" placeholder="Email address"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <button type="submit" >SUBMIT</button>
+</form>    
+</body>
+<script>
+// form validation involves validating all info provided in a form on the server.Form validation can also happen in the client side 
+// Functions of form validation 
+// Basic validation- Ensures that all fields are filled.It can be implemented by a simple loop through each field
+// Data format validation- Checks the data for correctness
+function validate(){
+  if(document.myform.email.value=="") {
+    alert('Please fill in your email');
+    document.myform.email.focus();
+    return false;
+  } 
+  else if(document.myform.password.value==""){
+    alert('Please fill in your password');
+    document.myform.password.focus();
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+
+
+
+
+
+
+
+</script>
+</html>

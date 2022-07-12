@@ -1,0 +1,28 @@
+<html>
+    <body>
+  <form >
+    <input id="text" type="text"  placeholder="Email"><br>
+    <button onclick="validateEmail()" type="button">SUBMIT</button>
+  </form>      
+    </body>
+    <script>
+//In email address validation first there is a check of presence of the @ symbol
+//In a mail address there is the personal data, @ symbol and the domain name
+//For the personal data it should contain uppercase and lowercase characters,
+// digits(0-9), characters (!,#,%$,'',/,=,?,_,{},|,-),
+// character "" provided that the period does not occur twice and is not the first or the last character
+function validateEmail(){
+var mail = document.getElementById('text').value;
+var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+if(mail.match(regx)){
+    alert('Valid mail');
+    return true;
+}
+else{
+    alert('Invalid mail');
+    return false;
+}
+}
+    </script>
+</html>

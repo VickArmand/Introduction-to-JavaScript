@@ -1,0 +1,41 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+// Regular expressions is a sequence of characters that forms a search pattern 
+// Site to use to understand regex is https://regexr.com/
+// General syntax
+//    /pattern/flag
+// Flags- they are appended at the end of a regex literal(second argument to a regular expression)
+// They are used in altering the behaviour of a regex
+// Examples of regex flags are:
+    // g- global. Finds all matches instead of stopping after the first
+    // i- case insensitive. /[a-z]/ is equivalent to /[a-zA-Z]
+    // m- Multiline. ^ and $ match the beginning and the end of each line respectivley treating \n and \r as delimiters
+    // u- Unicode. If this flag is not supported you must match the specific Unicode characters with \uXXXX where XXXX is the characters value in hexadecimal
+    // y- sticky. Finds all consecutive/adjacent matches  
+
+// Patterns- Brackets are used to find the range of characters
+// Examples of patterns:
+        // [a-z]- Finds a lower case character from a to z
+        // [0-9]- Finds any digit between 0 to 9
+        // [a-z|0-9]- Finds any character of digits
+//Quantifiers- define the number of occurrences of a string
+// Examples of quantifiers
+        //N+ - + indicates one or more occurrences of the character n
+        //N* - * indicates zero or more occurrences of the character n
+        //N? - ? indicates zero or one occurrence of character n
+    // eg:a*b* selects zero or more a's followed by zero or more b's
+
+// \w - matches any word character
+// \W - matches any non-word characters
+// \s - matches any whitespaces
+// \s - matches any non- whitespaces ie: characters
+// \d - matches any digits
+// \D - matches any non-digits
+// \d{3}- groups the digits in 3's
+// \w{3}- groups the words in 3's
+// \w{3,4}- groups words in 3's or 4's
+</script>
+</html>

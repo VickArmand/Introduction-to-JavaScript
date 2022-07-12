@@ -1,8 +1,35 @@
 <html>
     <body>
-        
+  <h3>JS this keyword</h3>      
     </body>
     <script>
 // this keyword refers to an object which is executing the current piece of code(function)
-    </script>
+// if the function being referenced is a regular function 'this' references the global object/global variable
+// if the function  being referenced is a method in an object this references the object itself 
+var value=50;
+function My_function(){
+    var value=100;
+    alert("Value is "+value);
+    alert('this value is '+this.value);
+}
+
+My_function();
+
+const random= {
+    name:'Tutorial',
+    video:['JavaScript','this','keyword'],
+    info(){
+        console.log('My name is '+this.name);
+        // forEach in JS takes 2 parameters which are the callback function and the object
+        this.video.forEach(function(tag)
+        {
+          console.log(this.name, tag);  
+        },this);
+    }
+}
+random.info();
+
+
+
+</script>
 </html>
