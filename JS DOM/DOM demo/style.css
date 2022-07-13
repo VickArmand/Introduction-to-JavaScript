@@ -17,21 +17,14 @@ body{
     color: #444;
     letter-spacing: 1px;
 }
+.container{
+    padding: 50px;
+}
 h1,h2{
     font-weight: normal;
 }
+
 #wrapper{
-    background-color: #eee;
-    width: 90%;
-    max-width: 960px;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.7);
-    padding: 0 0 20px;
-    overflow: hidden;
-    border: 1px solid lightgray;
-}
-#page-banner{
     background-image: url('images/Cinema-Hall-Movie-House-PixelBoom.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
@@ -44,6 +37,17 @@ h1,h2{
     width: 100%;
     text-align: center;
     margin: 10px 0;
+}
+.card{
+    background-color: #eee;
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.7);
+    padding: 0 0 20px;
+    overflow: hidden;
+    border: 1px solid lightgray;
 }
 #movie-list, #add-movie{
     margin:30px;
@@ -96,7 +100,6 @@ background:maroon;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     width: 100px;
-    float: left;
     margin: 20px 0;
     border-left: 0;
     color: white;

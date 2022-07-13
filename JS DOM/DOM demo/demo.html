@@ -1,20 +1,43 @@
 <html>
     <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <title>Movie JS</title>
     </head>
     <body>
      <div class="container">
-        <div class="card">
-           <div class="movies-list">
-
-           </div>
-           <div class="insert-form">
-            <form>
-                <input type="text">
-                <button type="submit">ADD</button>
-            </form>
-           </div> 
+        <div id="wrapper">
+            <header>
+                <div id="page-banner">
+                 <h1 class="title" style="color:#fff;">Movie Time</h1>
+                 <p style="color:#fff;">A curated list of amazing movies</p>
+                </div> 
+             </header>
+            <div class="card">
+                
+               <div id="movie-list">
+                <h2 class="title">Movies to watch</h2>
+                <ul>
+                    <li><span class="name">The Intern</span> <span class="delete">DELETE</span></li>
+                    <li><span class="name">The Inception</span> <span class="delete">DELETE</span></li>
+                    <li><span class="name">The Prestige</span> <span class="delete">DELETE</span></li>
+                    <li><span class="name">The Wolves of wall street</span> <span class="delete">DELETE</span></li>
+                
+                </ul>
+               </div>
+               <div class="insert-form">
+                
+                <form id="add-movie">
+                    <h2 class="title" style="text-align: center;">ADD A MOVIE</h2>
+                    <input type="text" placeholder="Enter a movie name to be added">
+                    <button type="submit">ADD</button>
+                </form>
+               </div> 
+            </div>
         </div>
+       
      </div>   
     </body>
 <script src="script.js"></script>   
