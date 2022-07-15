@@ -75,7 +75,67 @@ set fuelset(fuel){
 document.getElementById('demo').innerHTML=carx.fuel;
 carx.fuelset='Petrol';
 document.getElementById('demo').innerHTML=carx.fuel_type;
+// Accessing JavaScript Properties
+// The syntax for accessing the property of an object is:
 
+// objectName.property      // person.age
+// or
+
+// objectName["property"]   // person["age"]
+// or
+
+// objectName[expression]   // x = "age"; person[x]
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+console.log(person.firstName + " is " + person.age + " years old.");
+console.log(person["firstName"] + " is " + person["age"] + " years old.");
+
+// Delete properties
+// The delete keyword deletes both the value of the property and the property itself.
+// After deletion, the property cannot be used before it is added back again.
+// The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+// The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+
+delete person.lastName;
+// Nested Objects
+// Values in an object can be another object:
+nestedObj = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+// You can access nested objects using the dot notation or the bracket notation:
+console.log(nestedObj.cars.car1);
+console.log(nestedObj.cars['car1']);
+console.log(nestedObj['cars']['car1']);
+// Nested Arrays and Objects
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+// Accessing nested array and objects values
+for (let x in myObj.cars){
+    y=myObj.cars[x].name;
+    document.write('Car names are: '+ y+'<br>');
+    z=myObj.cars[x].models;
+    for (let a of z){
+        document.write('Models are: '+ a+'<br>');
+    }
+}
     </script>
 
 </html>

@@ -1,0 +1,45 @@
+<html>
+    <body>
+        
+
+    </body>
+    <script>
+//     A JavaScript Set is a collection of unique values.
+// Each value can only occur once in a Set.
+// A Set can hold any value of any data type.
+// You can create a JavaScript Set by:
+
+    // Passing an Array to new Set()
+    // Create a new Set and use add() to add values
+    // Create a new Set and use add() to add variables
+const letters = new Set(["a","b","c"]);
+document.write(letters.values()+'<br>');// Returns [object Set Iterator]
+// Now you can use the Iterator object to access the elements:
+const myIterator = letters.values();
+let text = "";
+for (const entry of myIterator) {
+  text += entry + '<br>';
+}
+document.write(text);
+// Add values to the set
+// If you add equal elements, only the first will be saved:
+letters.add("d");
+// The forEach() method invokes a function for each Set element:
+let text2 = "";
+letters.forEach (function(value) {
+  text2 += value + '<br>';
+
+})
+document.write(text2);
+// A Set has no keys.
+// keys() returns the same as values().
+// entries() returns [value,value] pairs instead of [key,value] pairs.
+// This makes Sets compatible with Maps:
+
+// remove elements from sets
+letters.delete('d');
+document.write('The number of values in the set: '+letters.size+'<br>');
+// Checking if a value exists in a set
+document.write(letters.has('d'))
+    </script>
+</html>

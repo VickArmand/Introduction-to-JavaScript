@@ -1,0 +1,95 @@
+<html>
+    <body>
+        
+    </body>
+
+    <script>
+// A Map holds key-value pairs where the keys can be any datatype.
+// A Map remembers the original insertion order of the keys.
+// A Map has a property that represents the size of the map.
+// You can create a JavaScript Map by:
+        // Passing an Array to new Map()
+        // Create a Map and use Map.set()
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+const fruits2 = new Map();
+
+// Set Map Values
+fruits2.set("apples", 500);
+fruits2.set("bananas", 300);
+fruits2.set("oranges", 200);
+// The set() method can also be used to change existing Map values:
+fruits.set("apples", 500);
+// You can use the values() method to sum the values in a Map:
+let total=0;
+for (const x of fruits.values()) {
+  total += x;
+}
+document.write(total+ '<br>');
+// The get() method gets the value of a key in a Map:
+document.write(fruits.get("apples")+ '<br>'); 
+// The size property returns the number of elements in a Map:
+document.write('Number of elements in the map currently are '+fruits.size+ '<br>');
+// The delete() method removes a Map element:
+fruits.delete("apples");
+
+// The clear() method removes all the elements from a Map:
+fruits.clear();
+// The has() method returns true if a key exists in a Map:
+document.write('Does apples exist in the map? '+fruits.has("apples"));
+// Differences between JavaScript Objects and Maps:
+// Object	                                Map
+// Not directly iterable	            Directly iterable
+// Do not have a size property	        Have a size property
+// Keys must be Strings (or Symbols)	Keys can be any datatype
+// Keys are not well ordered	        Keys are ordered by insertion
+// Have default keys	                Do not have default keys
+
+// The forEach() method invokes a callback for each key/value pair in a Map:
+let text = "";
+fruits.forEach (function(value, key) {
+  text += key + ' = ' + value;
+})
+document.write(text);
+// The entries() method returns an iterator object with the [key,values] in a Map:
+
+for (const x of fruits.entries()) {
+  text += x;
+}
+document.write(text);
+// The keys() method returns an iterator object with the keys in a Map:
+
+for (const x of fruits.keys()) {
+  text += x;
+}
+document.write(text+ '<br>');
+// The values() method returns an iterator object with the values in a Map:
+for (const x of fruits.values()) {
+  text += x;
+}
+document.write(text+ '<br>');
+
+// Objects as Keys
+// Create Objects
+const apples = {name: 'Apples'};
+const bananas = {name: 'Bananas'};
+const oranges = {name: 'Oranges'};
+
+// Create a Map
+const fruits3 = new Map();
+
+// Add new Elements to the Map
+fruits3.set(apples, 500);
+fruits3.set(bananas, 300);
+fruits3.set(oranges, 200);
+document.write(fruits3);
+// Remember: The key is an object (apples), not a string ("apples"):
+fruits3.get("apples");  // Returns undefined
+
+
+
+    </script>
+</html>

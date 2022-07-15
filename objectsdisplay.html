@@ -1,0 +1,47 @@
+<html>
+    <body>
+     <p id="demo"></p>   
+    </body>
+    <script>
+// Displaying a JavaScript object will output [object Object].
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+document.write(person);
+// Some common solutions to display JavaScript objects are:
+    // Displaying the Object Properties by name
+    // Displaying the Object Properties in a Loop
+    // Displaying the Object using Object.values()
+    // Displaying the Object using JSON.stringify()
+    document.getElementById("demo").innerHTML =
+person.name + "," + person.age + "," + person.city;
+
+let txt = "";
+for (let x in person) {
+txt += person[x] + " ";
+};
+
+document.getElementById("demo").innerHTML = txt;
+
+
+
+const myArray = Object.values(person);
+document.getElementById("demo").innerHTML = myArray;
+// Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+let myString = JSON.stringify(person);
+document.getElementById("demo").innerHTML = myString;
+// JSON.stringify will not stringify functions:
+// This can be "fixed" if you convert the functions into strings before stringifying.
+const person2 = {
+  name: "John",
+  age: function () {return 30;}
+};
+person.age = person.age.toString();
+
+let myString2 = JSON.stringify(person);
+document.getElementById("demo").innerHTML = myString2;
+    </script>
+</html>

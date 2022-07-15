@@ -1,0 +1,22 @@
+<html>
+    <body>
+    <p>With the bind() method, an object can borrow a method from another object.</p>    
+    </body>
+    <script>
+        const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+// Sometimes the bind() method has to be used to prevent loosing this.
+    </script>
+</html>

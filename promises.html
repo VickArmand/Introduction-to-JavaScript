@@ -7,6 +7,7 @@
 // With the help of promises and otherAsynchronous concepts, 
 // JS can perform long requests simultaneously without blocking the main thread 
 
+// A JavaScript Promise object contains both the producing code and calls to the consuming code:
 // A promise is an asynchronous action that 
 // may complete at some point in future and produce a value.
 // It notifies the user when its value is available
@@ -21,6 +22,7 @@
 // catch(callback)- used to attach a callback when a promise is rejected
 
 let car= new Promise(function(resolve,reject){
+    // "Producing Code" (May take some time)
     fuel_fulltank=true;
     if(fuel_fulltank){
         resolve();
@@ -29,6 +31,7 @@ let car= new Promise(function(resolve,reject){
         reject();
     }
 });
+// "Consuming Code" (Must wait for a fulfilled Promise)
 car.then(function(){
     document.write('Fuel tank is full');
 }).catch(function(){
